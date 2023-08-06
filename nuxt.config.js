@@ -90,6 +90,7 @@ export default {
     { src: '@/plugins/OtpInput.js' },
     { src: '@/plugins/vue-json-excel.js' },
     { src: '@/plugins/VueKhalti.js' },
+    { src: '@/plugins/operating-system.js', mode: 'client' },
   ],
   /*
    ** Auto import components
@@ -118,7 +119,8 @@ export default {
     dsn: 'https://1e4809f34cdcb6e78a1474aa36090186@o4505561130139648.ingest.sentry.io/4505617697800192', // Enter your project's DSN.
     // Additional module options go here.
     config: {
-      environment: 'development'
+      environment: process.env.NODE_ENV,
+      tracesSampleRate: "1"
     }
   },
   pwa: {

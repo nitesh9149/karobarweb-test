@@ -120,6 +120,7 @@
         </div>
       </span>
     </aside-tools>
+    <span style="color:white;">{{userOS}}</span>
     <div class="hrl"></div>
     <b-menu>
       <b-menu-list label="BUSINESS">
@@ -400,6 +401,9 @@ export default {
   },
   computed: {
     ...mapState(["isAsideVisible", "isAsideExpanded", "modalState", "counter"]),
+    userOS() {
+      return this.$getOperatingSystem();
+    },
   },
   watch: {
     counter() {
