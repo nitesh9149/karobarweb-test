@@ -1,5 +1,6 @@
 import axios from 'axios'
 export default async function ({ $auth, redirect }) {
+    console.log(process.env.NODE_ENV)
     try {
         let user = $auth.user
         if (user.blocked == true) {

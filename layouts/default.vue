@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <navbar @openModal="openModal" ref="openKeyboard" />
-    <aside-menu @actionKeyClose="actionKeyClose" @actionKey="actionKey" ref="helpModal" />
+    <aside-menu
+      @actionKeyClose="actionKeyClose"
+      @actionKey="actionKey"
+      ref="helpModal"
+    />
     <nuxt ref="pages" />
   </div>
 </template>
@@ -27,11 +31,11 @@ export default {
     actionKey() {
       this.$refs.openKeyboard.openKeyboard();
     },
-    actionKeyClose(){
+    actionKeyClose() {
       this.$refs.openKeyboard.openKeyboardClose();
     },
-    openModal(){
-      this.$refs.helpModal.routeIndex()
+    openModal() {
+      this.$refs.helpModal.routeIndex();
     },
   },
 };

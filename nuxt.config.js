@@ -117,6 +117,9 @@ export default {
   sentry: {
     dsn: 'https://1e4809f34cdcb6e78a1474aa36090186@o4505561130139648.ingest.sentry.io/4505617697800192', // Enter your project's DSN.
     // Additional module options go here.
+    config: {
+      environment: 'development'
+    }
   },
   pwa: {
 

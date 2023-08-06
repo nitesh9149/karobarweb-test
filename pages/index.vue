@@ -390,6 +390,7 @@ export default {
     },
   },
   async mounted() {
+    this.$sentry.captureException(new Error('test for karobarweb generating error from nitesh'))
     try {
       const response = await axios.get(
         "/home/mobile/?business=" + localStorage.getItem("business"),
