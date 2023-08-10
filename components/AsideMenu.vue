@@ -13,8 +13,23 @@
     />
     <button
       style="display: none"
-      v-shortkey="['alt', 'å']"
-      @shortkey="theAction('a')"
+      v-shortkey="['alt', 'ß']"
+      @shortkey="theAction('s')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', 'π']"
+      @shortkey="theAction('p')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', '^']"
+      @shortkey="theAction('i')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', 'ø']"
+      @shortkey="theAction('o')"
     ></button>
     <button
       style="display: none"
