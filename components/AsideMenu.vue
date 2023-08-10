@@ -13,6 +13,11 @@
     />
     <button
       style="display: none"
+      v-shortkey="['alt', 'å']"
+      @shortkey="theAction('a')"
+    ></button>
+    <button
+      style="display: none"
       v-shortkey="['alt', 's']"
       @shortkey="theAction('s')"
     ></button>
@@ -120,7 +125,8 @@
         </div>
       </span>
     </aside-tools>
-    <span style="color:white;">{{userOS}}</span>
+    <span style="color: white">{{ userOS }}</span>
+    <span style="color: white">{{ keyboard }}</span>
     <div class="hrl"></div>
     <b-menu>
       <b-menu-list label="BUSINESS">
@@ -391,6 +397,7 @@ export default {
       isExpandedBanks: false,
       isExpandedExpenses: false,
       isExpandedImport: false,
+      keyboard: "",
     };
   },
   props: {
@@ -539,6 +546,7 @@ export default {
       }
       let permissions = {
         admin: {
+          a: true,
           s: true,
           p: true,
           i: true,
@@ -559,6 +567,7 @@ export default {
           sk: true,
         },
         "business-partner": {
+          a: true,
           s: true,
           p: true,
           i: true,
@@ -579,6 +588,7 @@ export default {
           sk: true,
         },
         "sales-person": {
+          a: true,
           s: true,
           p: false,
           i: true,
@@ -599,6 +609,7 @@ export default {
           sk: true,
         },
         "inventory-manager": {
+          a: true,
           s: false,
           p: true,
           i: false,
@@ -619,6 +630,7 @@ export default {
           sk: true,
         },
         accountant: {
+          a: true,
           s: false,
           p: false,
           i: false,
@@ -651,6 +663,11 @@ export default {
       }
       localStorage.removeItem("party_details");
       switch (key) {
+        case "a":
+          this.keyboard = "pressed a";
+          this.$emit("actionKeyClose");
+          this.isModalActive2 = false;
+          break;
         case "s":
           this.$router.push("/saleInvoice");
           this.$emit("actionKeyClose");
