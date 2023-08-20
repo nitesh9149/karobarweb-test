@@ -16,6 +16,7 @@
       v-shortkey="['alt', 'ß']"
       @shortkey="theAction('s')"
     ></button>
+    <!-- works on mac -->
     <button
       style="display: none"
       v-shortkey="['alt', 'π']"
@@ -23,14 +24,47 @@
     ></button>
     <button
       style="display: none"
-      v-shortkey="['alt', '^']"
+      v-shortkey="['alt', 'ˆ']"
       @shortkey="theAction('i')"
     ></button>
+    <!-- works on mac -->
     <button
       style="display: none"
       v-shortkey="['alt', 'ø']"
       @shortkey="theAction('o')"
     ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', 'ç']"
+      @shortkey="theAction('c')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', '∂']"
+      @shortkey="theAction('d')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', 'œ']"
+      @shortkey="theAction('q')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', '≈']"
+      @shortkey="theAction('x')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', 'µ']"
+      @shortkey="theAction('m')"
+    ></button>
+    <button
+      style="display: none"
+      v-shortkey="['alt', '˜']"
+      @shortkey="theAction('n')"
+    ></button>
+
+    <!-- windows keyboard -->
     <button
       style="display: none"
       v-shortkey="['alt', 's']"
